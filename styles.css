@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+:root {
+    /* Font */
+    --font1: 'Big Shoulders Display', cursive;
+    --font2: 'Lexend Deca', sans-serif;
+    /* Colors */ 
+
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+
+    /* Paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* Background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+body, button {
+    background-color: var(--very-light-gray);
+}
+h1 {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: var(--font1);
+    font-weight: 700;
+    font-size: 2.5em;
+
+}
+p {
+    color: var(--transparent-white);
+    font-family: var(--font2);
+    font-size: .9375em;
+    line-height: 1.5;
+}
+#container {
+    display: flex;
+    height: 31rem;
+    width: 56rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    
+}
+.sedans {
+    background-color: var(--bright-orange);
+    
+    
+}
+.suv {
+    background-color: var(--dark-cyan);
+}
+.luxury {
+    background-color: var(--very-dark-cyan);
+    
+    
+}
+.suv, .sedans, .luxury {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding: 3rem;
+}
+button {
+    border-radius: 2em;
+    background-color: var(--very-light-gray);
+    border: .1rem solid var(--very-light-gray);
+    cursor: pointer;
+    mix-blend-mode: screen;
+    width: 70%;
+    padding: .8rem 2rem;
+    font-size: .8rem;
+    transition: .2s;
+    margin-top: 2rem;
+
+    
+}
+button:hover {
+    background-color: transparent;
+    border: .1rem solid white;
+    color: var(--very-light-gray);
+   
+}
+
+@media screen and (max-width: 800px){
+    
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+        height: 100%;
+        
+    }
+    h1, p {
+        margin-top: 2rem;
+    }
+    .suv, .sedans, .luxury {
+       display: flex;
+       flex-direction: column;
+       padding: 3em;
+
+    }
+    button {
+        width: 60%;
+    }
+}
